@@ -46,22 +46,13 @@ namespace ProductManagement.Controllers
         }
 
         [HttpPost]
-        public ActionResult Save(CustomerFormViewModel formViewModel)
+        public ActionResult Save(Customer customer)
         {
-            var customer = new Customer()
-                               {
-                                   Id = formViewModel.Customer.Id,
-                                   Name = formViewModel.Customer.Name,
-                                   BirthDate = formViewModel.Customer.BirthDate,
-                                   IsSubscribedToNewsletter = formViewModel.Customer.IsSubscribedToNewsletter,
-                                   MembershipType = formViewModel.Customer.MembershipType,
-                                   MembershipTypeId = formViewModel.Customer.MembershipTypeId
-                               };
 
-            if (formViewModel.Customer.Id == 0) _context.Customers.Add(customer);
+            if (customer.Id == 0) _context.Customers.Add(customer);
             else
             {
-                var customerInDb = _context.Customers.Single(c => c.Id == formViewModel.Customer.Id);
+                var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
 
                 customerInDb.Name = customer.Name;
                 customerInDb.BirthDate = customer.BirthDate;
