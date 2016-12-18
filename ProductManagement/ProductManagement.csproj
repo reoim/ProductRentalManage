@@ -223,6 +223,42 @@
     <Compile Include="Migrations\201612180253528_ApplyAnnotationsToCustomerName.Designer.cs">
       <DependentUpon>201612180253528_ApplyAnnotationsToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612180452141_AddMembershipTypeName.cs" />
+    <Compile Include="Migrations\201612180452141_AddMembershipTypeName.Designer.cs">
+      <DependentUpon>201612180452141_AddMembershipTypeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612180454108_UpdateMembershipTypeName.cs" />
+    <Compile Include="Migrations\201612180454108_UpdateMembershipTypeName.Designer.cs">
+      <DependentUpon>201612180454108_UpdateMembershipTypeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612180521101_AddBirthDateToCustomer.cs" />
+    <Compile Include="Migrations\201612180521101_AddBirthDateToCustomer.Designer.cs">
+      <DependentUpon>201612180521101_AddBirthDateToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612180540119_UpdateDateType.cs" />
+    <Compile Include="Migrations\201612180540119_UpdateDateType.Designer.cs">
+      <DependentUpon>201612180540119_UpdateDateType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612180602581_AddPropertiesToMovie.cs" />
+    <Compile Include="Migrations\201612180602581_AddPropertiesToMovie.Designer.cs">
+      <DependentUpon>201612180602581_AddPropertiesToMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612180608509_UpdateDataTypeMovie.cs" />
+    <Compile Include="Migrations\201612180608509_UpdateDataTypeMovie.Designer.cs">
+      <DependentUpon>201612180608509_UpdateDataTypeMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612180614030_ReUpdateDataTypeMovie.cs" />
+    <Compile Include="Migrations\201612180614030_ReUpdateDataTypeMovie.Designer.cs">
+      <DependentUpon>201612180614030_ReUpdateDataTypeMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612180622127_PopulateMovie.cs" />
+    <Compile Include="Migrations\201612180622127_PopulateMovie.Designer.cs">
+      <DependentUpon>201612180622127_PopulateMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612181014141_NullableTypeUpdate.cs" />
+    <Compile Include="Migrations\201612181014141_NullableTypeUpdate.Designer.cs">
+      <DependentUpon>201612181014141_NullableTypeUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -298,6 +334,7 @@
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -326,6 +363,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612180253528_ApplyAnnotationsToCustomerName.resx">
       <DependentUpon>201612180253528_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612180452141_AddMembershipTypeName.resx">
+      <DependentUpon>201612180452141_AddMembershipTypeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612180454108_UpdateMembershipTypeName.resx">
+      <DependentUpon>201612180454108_UpdateMembershipTypeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612180521101_AddBirthDateToCustomer.resx">
+      <DependentUpon>201612180521101_AddBirthDateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612180540119_UpdateDateType.resx">
+      <DependentUpon>201612180540119_UpdateDateType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612180602581_AddPropertiesToMovie.resx">
+      <DependentUpon>201612180602581_AddPropertiesToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612180608509_UpdateDataTypeMovie.resx">
+      <DependentUpon>201612180608509_UpdateDataTypeMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612180614030_ReUpdateDataTypeMovie.resx">
+      <DependentUpon>201612180614030_ReUpdateDataTypeMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612180622127_PopulateMovie.resx">
+      <DependentUpon>201612180622127_PopulateMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612181014141_NullableTypeUpdate.resx">
+      <DependentUpon>201612181014141_NullableTypeUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
