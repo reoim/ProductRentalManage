@@ -15,25 +15,25 @@ namespace ProductManagement.Controllers
 
         public MoviesController()
         {
-            this._context = new ApplicationDbContext();
+            _context = new ApplicationDbContext();
         }
 
         protected override void Dispose(bool disposing)
         {
-            this._context.Dispose();
+            _context.Dispose();
         }
 
         // GET: Movies
 
         public ViewResult Index()
         {
-            var moives = this._context.Movies.ToList();
+            var moives = _context.Movies.ToList();
             return View(moives);
         }
 
         public ActionResult Details(int id)
         {
-            var movie = this._context.Movies.SingleOrDefault(c => c.Id == id);
+            var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
             return View(movie);
         }
        
