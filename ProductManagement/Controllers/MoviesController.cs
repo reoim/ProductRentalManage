@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -27,7 +28,7 @@ namespace ProductManagement.Controllers
 
         public ViewResult Index()
         {
-            var moives = _context.Movies.ToList();
+            var moives = _context.Movies.Include(m => m.Genre).ToList();
             return View(moives);
         }
 
@@ -35,6 +36,17 @@ namespace ProductManagement.Controllers
         {
             var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
             return View(movie);
+        }
+
+        public ActionResult New()
+        {
+            var movie = new Movie();
+            return View(movie);
+        }
+
+        public ActionResult Save()
+        {
+            return View();
         }
        
     }

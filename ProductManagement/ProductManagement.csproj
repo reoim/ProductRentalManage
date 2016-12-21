@@ -259,9 +259,42 @@
     <Compile Include="Migrations\201612181014141_NullableTypeUpdate.Designer.cs">
       <DependentUpon>201612181014141_NullableTypeUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612210425425_DropGenre.cs" />
+    <Compile Include="Migrations\201612210425425_DropGenre.Designer.cs">
+      <DependentUpon>201612210425425_DropGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612210428595_newModelGenre.cs" />
+    <Compile Include="Migrations\201612210428595_newModelGenre.Designer.cs">
+      <DependentUpon>201612210428595_newModelGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612210437576_GenresModel.cs" />
+    <Compile Include="Migrations\201612210437576_GenresModel.Designer.cs">
+      <DependentUpon>201612210437576_GenresModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612210439225_PopulateGenres.cs" />
+    <Compile Include="Migrations\201612210439225_PopulateGenres.Designer.cs">
+      <DependentUpon>201612210439225_PopulateGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612210443205_MoreGenres.cs" />
+    <Compile Include="Migrations\201612210443205_MoreGenres.Designer.cs">
+      <DependentUpon>201612210443205_MoreGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612210454593_AddGenreColumn.cs" />
+    <Compile Include="Migrations\201612210454593_AddGenreColumn.Designer.cs">
+      <DependentUpon>201612210454593_AddGenreColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612210459317_PopulateGenreToMovies.cs" />
+    <Compile Include="Migrations\201612210459317_PopulateGenreToMovies.Designer.cs">
+      <DependentUpon>201612210459317_PopulateGenreToMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612210517032_UpdateMovies.cs" />
+    <Compile Include="Migrations\201612210517032_UpdateMovies.Designer.cs">
+      <DependentUpon>201612210517032_UpdateMovies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -337,6 +370,7 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Customers\CustomerForm.cshtml" />
+    <Content Include="Views\Movies\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -391,6 +425,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612181014141_NullableTypeUpdate.resx">
       <DependentUpon>201612181014141_NullableTypeUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612210425425_DropGenre.resx">
+      <DependentUpon>201612210425425_DropGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612210428595_newModelGenre.resx">
+      <DependentUpon>201612210428595_newModelGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612210437576_GenresModel.resx">
+      <DependentUpon>201612210437576_GenresModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612210439225_PopulateGenres.resx">
+      <DependentUpon>201612210439225_PopulateGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612210443205_MoreGenres.resx">
+      <DependentUpon>201612210443205_MoreGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612210454593_AddGenreColumn.resx">
+      <DependentUpon>201612210454593_AddGenreColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612210459317_PopulateGenreToMovies.resx">
+      <DependentUpon>201612210459317_PopulateGenreToMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612210517032_UpdateMovies.resx">
+      <DependentUpon>201612210517032_UpdateMovies.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

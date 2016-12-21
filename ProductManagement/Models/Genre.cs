@@ -7,23 +7,13 @@ namespace ProductManagement.Models
 {
     using System.ComponentModel.DataAnnotations;
 
-    public class Movie
+    public class Genre
     {
-        [Required]
         public int Id { get; set; }
+
+        
         [Required]
         public string Name { get; set; }
 
-        public DateTime? ReleaseDate { get; set; }
-
-        public int GenreId { get; set; }
-
-        public string Genre { get; set; }
-
-        public int? Stock { get; set; }
-
-        public DateTimeOffset? DateAdded { get; set; }
-
-        
     }
 }
