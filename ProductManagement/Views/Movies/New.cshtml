@@ -1,4 +1,4 @@
-﻿@model ProductManagement.Models.Movie
+﻿@model ProductManagement.ViewModels.MovieGenreViewModel
 @{
     ViewBag.Title = "New";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -9,20 +9,20 @@
 @using (Html.BeginForm("Save", "Movies"))
 {
     <div class="form-group">
-        @Html.LabelFor(m=>m.Name)
-        @Html.TextBoxFor(m=>m.Name)
+        @Html.LabelFor(m=>m.Movie.Name)
+        @Html.TextBoxFor(m=>m.Movie.Name, new { @class = "form-control" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.ReleaseDate)
-        @Html.TextBoxFor(m => m.ReleaseDate)
+        @Html.LabelFor(m => m.Movie.ReleaseDate)
+        @Html.TextBoxFor(m => m.Movie.ReleaseDate, new { @class = "form-control" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Genre)
-        @Html.DropDownListFor(m => m.Genre)
+        @Html.LabelFor(m => m.Movie.Genre)
+        @Html.DropDownListFor(m => m.Movie.GenreId, new SelectList(Model.Genres, "Id", "Name"), "Select Genre", new {@class = "form-control"})
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Stock)
-        @Html.TextBoxFor(m =>m.Stock)
+        @Html.LabelFor(m => m.Movie.Stock)
+        @Html.TextBoxFor(m =>m.Movie.Stock, new { @class = "form-control" })
     </div>
 }
 

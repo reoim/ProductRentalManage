@@ -8,7 +8,7 @@ using ProductManagement.Models;
 
 namespace ProductManagement.Controllers
 {
-
+    using ProductManagement.ViewModels;
 
     public class MoviesController : Controller
     {
@@ -28,8 +28,8 @@ namespace ProductManagement.Controllers
 
         public ViewResult Index()
         {
-            var moives = _context.Movies.Include(m => m.Genre).ToList();
-            return View(moives);
+            var movies = _context.Movies.Include(m => m.Genre).ToList();
+            return View(movies);
         }
 
         public ActionResult Details(int id)
@@ -40,8 +40,9 @@ namespace ProductManagement.Controllers
 
         public ActionResult New()
         {
-            var movie = new Movie();
-            return View(movie);
+            var genres = _context.Genres.ToList();
+            var viewModel = new MovieGenreViewModel {Genres = genres};
+            return View(viewModel);
         }
 
         public ActionResult Save()
