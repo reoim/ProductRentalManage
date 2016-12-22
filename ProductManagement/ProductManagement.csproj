@@ -295,6 +295,14 @@
     <Compile Include="Migrations\201612211317318_UpdateDataTypeofGenre.Designer.cs">
       <DependentUpon>201612211317318_UpdateDataTypeofGenre.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612221310585_AutoCurrentTime.cs" />
+    <Compile Include="Migrations\201612221310585_AutoCurrentTime.Designer.cs">
+      <DependentUpon>201612221310585_AutoCurrentTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612221329314_DataTypeCahngeForAddedDate.cs" />
+    <Compile Include="Migrations\201612221329314_DataTypeCahngeForAddedDate.Designer.cs">
+      <DependentUpon>201612221329314_DataTypeCahngeForAddedDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -375,7 +383,7 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Customers\CustomerForm.cshtml" />
-    <Content Include="Views\Movies\New.cshtml" />
+    <Content Include="Views\Movies\MovieForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -457,6 +465,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612211317318_UpdateDataTypeofGenre.resx">
       <DependentUpon>201612211317318_UpdateDataTypeofGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612221310585_AutoCurrentTime.resx">
+      <DependentUpon>201612221310585_AutoCurrentTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612221329314_DataTypeCahngeForAddedDate.resx">
+      <DependentUpon>201612221329314_DataTypeCahngeForAddedDate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

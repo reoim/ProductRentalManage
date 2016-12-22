@@ -6,6 +6,7 @@ using System.Web;
 namespace ProductManagement.Models
 {
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public class Movie
     {
@@ -24,7 +25,8 @@ namespace ProductManagement.Models
         [Display (Name = "Number in Stock")]
         public int? Stock { get; set; }
 
-        public DateTimeOffset? DateAdded { get; set; }
+        
+        public DateTime DateAdded { get; set; }
 
         
     }

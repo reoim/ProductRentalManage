@@ -1,11 +1,11 @@
 ﻿@using System.Web.UI.WebControls
 @model ProductManagement.ViewModels.CustomerFormViewModel
 @{
-    ViewBag.Title = "New";
+    ViewBag.Title = "MovieForm";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>New Customer</h2>
+<h2>MovieForm Customer</h2>
 
 @using (Html.BeginForm("Save", "Customers")) 
 {
@@ -23,7 +23,7 @@
     </div>
     <div class="checkbox">
         <label>
-            @Html.CheckBoxFor(m => m.Customer.IsSubscribedToNewsletter) Subscribed to Newsletter
+            @Html.CheckBoxFor(m => m.Customer.IsSubscribedToNewsletter) Subscribed to MovieFormsletter
         </label>
     </div>
     @Html.HiddenFor(m => m.Customer.Id)
