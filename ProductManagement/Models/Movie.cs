@@ -23,6 +23,7 @@ namespace ProductManagement.Models
         public Genre Genre { get; set; }
 
         [Display (Name = "Number in Stock")]
+        [Range(1,20)]
         public int? Stock { get; set; }
 
         

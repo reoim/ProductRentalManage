@@ -38,11 +38,11 @@ namespace ProductManagement.Controllers
             return View(movie);
         }
 
-        public ActionResult MovieForm()
+        public ActionResult New()
         {
             var genres = _context.Genres.ToList();
             var viewModel = new MovieGenreViewModel {Genres = genres};
-            return View(viewModel);
+            return View("MovieForm",viewModel);
         }
 
         public ActionResult Edit(int id)
@@ -57,8 +57,15 @@ namespace ProductManagement.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Movie movie)
         {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new MovieGenreViewModel { Movie = movie, Genres = this._context.Genres.ToList() };
+                return View("MovieForm", viewModel);
+            }
+
             if (movie.Id == 0)
             {
                 movie.DateAdded = DateTime.Now;

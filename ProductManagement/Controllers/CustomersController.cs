@@ -38,14 +38,20 @@ namespace ProductManagement.Controllers
             return View(customer);
         }
 
-        public ActionResult CustomerForm()
+        public ActionResult New()
         {
             var membershipTypes = _context.MembershipTypes.ToList();
-            var viewModel = new CustomerFormViewModel { MembershipTypes = membershipTypes};
-            return View(viewModel);
+            var viewModel = new CustomerFormViewModel
+                                {
+                                    Customer = new Customer(),
+                                    MembershipTypes = membershipTypes
+                                };
+            return View("CustomerForm",viewModel);
         }
+        
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
         {
             if (!ModelState.IsValid)
